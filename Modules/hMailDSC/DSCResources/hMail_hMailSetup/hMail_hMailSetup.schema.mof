@@ -1,0 +1,8 @@
+
+[ClassVersion("1.0.0.0"), FriendlyName("hMailSetup")]
+class hMail_hMailSetup : OMI_BaseResource
+{
+    [Key, Description("Set to 'present' to specificy that the product should be installed."), ValueMap{"Present","Absent"}, Values{"Present","Absent"}]     String Ensure;
+    [Required, Description("Path of the hMail .exe installer file.")] String InstallerPath;
+    [Required, Description("Path of the location where to install hMail.")] String InstallLocation;
+};

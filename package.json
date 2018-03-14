@@ -1,7 +1,7 @@
 {
-  "name": "workflowdsc",
+  "name": "hmailsc",
   "version": "1.0.0",
-  "description": "The WorkflowManagerDsc PowerShell module provides DSC resources that can be used to deploy and manage a Workflow Manager Farm",
+  "description": "The hMailDsc PowerShell module provides DSC resources that can be used to deploy and manage hMail Server",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "^3.9.1",
@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NikCharlebois/WorkflowManagerDsc.git"
+    "url": "git+https://github.com/NikCharlebois/hMailDSC.git"
   },
   "author": "Microsoft Corporation",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NikCharlebois/WorkflowManagerDsc/issues"
+    "url": "https://github.com/NikCharlebois/hMailDsc/issues"
   },
-  "homepage": "https://github.com/NikCharlebois/WorkflowManagerDsc#readme"
+  "homepage": "https://github.com/NikCharlebois/hMailDsc#readme"
 }

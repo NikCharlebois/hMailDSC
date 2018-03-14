@@ -1,4 +1,4 @@
-# Change log for WorkflowManagerDsc
+# Change log for hMailDsc
 
 ## 1.0
 

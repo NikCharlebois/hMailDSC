@@ -4,17 +4,18 @@
 This cmdlet determines the version number of Office Web Apps that is installed locally
 
 #>
-function Get-WmfDscInstalledProductVersion
+function Get-hMailInstalledLocation
 {
     [CmdletBinding()]
     [OutputType([Version])]
     param()
 
-    return Get-ItemProperty 'HKLM:\Software\Microsoft\Workflow Manager\*' | `
-        Select-Object Version | `
-        ForEach-Object -Process {
-            return [Version]::Parse($_.Version)
-        } | Select-Object -First 1
+    $key = Get-ItemProperty 'HKLM:\SOFTWARE\WOW6432Node\hMailServer' -EA SilentlyContinue
+    if($key)
+    {
+        return $key.InstallLocation
+    }
+    return $null
 }
 
 <#
@@ -36,7 +37,7 @@ This is a list of which properties in the desired values list should be checkked
 If this is empty then all values in DesiredValues are checked.
 
 #>
-function Test-WFDscParameterState() {
+function Test-hMailDscParameterState() {
     [CmdletBinding()]
     [OutputType([System.Boolean])]
     param
@@ -194,7 +195,7 @@ function Test-WFDscParameterState() {
     return $returnValue
 }
 
-function Test-WFDSCObjectHasProperty
+function Test-hMailDSCObjectHasProperty
 {
     [CmdletBinding()]
     [OutputType([System.Boolean])]
