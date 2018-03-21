@@ -1,4 +1,4 @@
-# WorkflowManagerDsc
+# hMailDsc
 
 The hMailDSCDsc module provides the ability to install hMail
 Server (https://www.hmailserver.com/).
